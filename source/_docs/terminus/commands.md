@@ -46,4 +46,5 @@ categories: [managing]
 <div class="terminus-pager col-md-12">
   <hr>
       <a style="float:left;" href="/docs/terminus/examples"><span class="terminus-pager-lsaquo">&lsaquo;</span>Example Usage</a>
+      <a style="float:right;" href="/docs/terminus/plugins"><span class="terminus-pager-rsaquo">&rsaquo;</span>Extend with Plugins</a>
 </div>
