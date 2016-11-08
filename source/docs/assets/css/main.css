@@ -34,8 +34,12 @@ p, h1, h2, h3, h4, h5, h6, a {
 }
 
 
-p{
+p {
   margin: 0 0 20px;
+}
+
+.instruction {  /*smaller margin-bottom on paragraphs preceeding code snippets*/
+  margin-bottom: 5px;
 }
 
 h1{
@@ -62,6 +66,10 @@ h4 {
   font-weight: 600;
   margin: 20px 0 10px 0;
   }
+
+.tab-content-heading {
+  margin-top: 15px; /*decrease top margin for headings located in tab switchers*/
+}
 
 .featured > li > a {
   text-transform: capitalize;
@@ -103,11 +111,17 @@ body {
   min-height: 100%;
   margin: 0 0 280px; /* bottom = footer height */
 }
+
 body.row.main {
   position: relative;
   top:50px;
   /* For scrollspy */
 }
+
+header {
+  margin-bottom: 20px;
+}
+
 .main{
   margin-bottom: 40px;
 }
@@ -512,6 +526,14 @@ span#changelog-rsaquo {
   cursor: not-allowed;
 }
 #subnav .subnav-search {
+}
+
+.tab-content {
+  border: 1px solid #ddd;
+  padding: 10px 20px 5px 20px;
+  border-top: 0;
+  margin-top: -10px;
+  border-radius: 4px;
 }
 
 /*Responsive layout*/
@@ -1808,11 +1830,17 @@ a.btn-primary-inverse:hover:after  {
     color: #222 !important;
 }
 
+.copy-snippet {
+  position: relative;
+  margin-bottom: 20px;
+}
 
 .btn-clippy {
-  float: right;
-  margin-left: -1px;
-  border-radius: 0px 4px 4px 0px;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  border-radius: 0 4px 4px 0;
   line-height: normal;
 }
 img.clippy {
@@ -1986,6 +2014,7 @@ img.clippy {
 */
 pre {
   display: block;
+  width: 100%;
   padding: 0px;
   margin: 0 0 0px;
   font-size: 13px;
@@ -1994,10 +2023,17 @@ pre {
   word-break: break-all;
   word-wrap: break-word;
   background-color: #fff;
-  border-radius: 4px 0px 0px 4px;
+  border-radius: 4px;
   margin-bottom: 14px;
   word-break: break-word;
 }
+
+pre code,
+pre code .hljs,
+.hljs {
+  padding: 0.75em 5em 0.75em 0.75em !important;
+}
+
 /**.hljs {
   padding: 9px 14px;
   background-color: #f7f7f9;
@@ -2722,7 +2758,7 @@ li.terminus-usage {
 
 .nav-tabs {
   padding-left: 20px;
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
   font-weight: bold;
