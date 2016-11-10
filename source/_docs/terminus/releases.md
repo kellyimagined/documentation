@@ -10,10 +10,10 @@ categories: [managing]
   <md ng-model="latestRelease.body"></md>
   <h3>Downloads</h3>
   <div ng-repeat="asset in latestRelease.assets">
-    <strong><a href="{[{asset.browser_download_url}]}">{[{asset.name}]}</a></strong>
+    <strong><a data-proofer-ignore href="{[{asset.browser_download_url}]}">{[{asset.name}]}</a></strong>
   </div>
-  <strong><a href="{[{latestRelease.zipball_url}]}">Source code (zip)</a></strong><br>
-  <strong><a href="{[{latestRelease.tarball_url}]}">Source code (tar.gz)</a></strong>
+  <strong><a data-proofer-ignore href="{[{latestRelease.zipball_url}]}">Source code (zip)</a></strong><br>
+  <strong><a data-proofer-ignore href="{[{latestRelease.tarball_url}]}">Source code (tar.gz)</a></strong>
 </div>
 <hr>
 <div id="terminusRelease" ng-app="terminusReleaseApp" ng-controller="terminusReleaseCtrl">

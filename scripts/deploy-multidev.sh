@@ -33,7 +33,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     export url=`bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
-    export docs_url=${url}docs
+    export docs_url=${url}/docs
   else
     # Create multidev
     ~/documentation/bin/terminus multidev:create static-docs.dev $normalize_branch
@@ -42,7 +42,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     export url=`bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
     export hostname=${url:8: -1}
-    export docs_url=${url}docs
+    export docs_url=${url}/docs
 
   fi
 
