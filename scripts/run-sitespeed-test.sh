@@ -11,8 +11,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   # Remove - to avoid failures
   export normalize_branch="${normalize_branch//[-_]}"
   export url=`bin/terminus env:view static-docs.$normalize_branch --print`
-  export url=https://${url:7: -1}
-  export url=https://$url/docs
+  export url=https://${url:7}docs
 
   # sitespeed expects the input file to contain full urls to s file with
   # production urls is used as a source, the production domain is then replaced
