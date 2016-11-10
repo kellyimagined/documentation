@@ -53,5 +53,5 @@ categories: [managing]
   <div class="terminus-pager">
     <hr>
         <a style="float:left;" href="/docs/terminus/commands"><span class="terminus-pager-lsaquo">&lsaquo;</span>Commands</a>
-        <a style="float:right;" href="/docs/terminus/versions"><span class="terminus-pager-rsaquo">&rsaquo;</span>Versions</a>
+        <a style="float:right;" href="/docs/terminus/releases"><span class="terminus-pager-rsaquo">&rsaquo;</span>Versions</a>
   </div>

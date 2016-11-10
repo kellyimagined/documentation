@@ -16,9 +16,12 @@ done
 
 #===============================================================#
 # Authenticate Terminus  and create json dump of help output    #
+# and auto generate changelog                                   #
 #===============================================================#
-~/documentation/bin/terminus auth login --machine-token=$PANTHEON_TOKEN
-~/documentation/bin/terminus cli cmd-dump > source/docs/assets/terminuscommands.json --format=json
+~/documentation/bin/terminus auth:login --machine-token $PANTHEON_TOKEN
+~/documentation/bin/terminus list > source/docs/assets/terminus/commands.json --format=json
+curl https://api.github.com/repos/pantheon-systems/terminus/releases > source/docs/assets/terminus/releases.json
+curl https://api.github.com/repos/pantheon-systems/terminus/releases/latest > source/docs/assets/terminus/releases/latest.json
 
 
 #===============================================================#
@@ -39,9 +42,8 @@ fi
 # Delete Multidev environment from static-docs site   #
 #=====================================================#
 # Identify existing environments for the static-docs site
-~/documentation/bin/terminus site environments --site=static-docs > ./env_list.txt
-echo "Existing environments:"
-tail -n +2 env_list.txt | cut -f1 | tee ./filtered_env_list.txt
+~/documentation/bin/terminus env:list --format list --field=ID static-docs > ./env_list.txt
+echo "Existing environments:" && cat env_list.txt
 # Create array of existing environments on Static Docs
 getExistingTerminusEnvs() {
     existing_terminus_envs=() # Clear array
@@ -50,7 +52,7 @@ getExistingTerminusEnvs() {
         existing_terminus_envs+=( "$env" ) # Append line to the array
     done < "$1"
 }
-getExistingTerminusEnvs "filtered_env_list.txt"
+getExistingTerminusEnvs "env_list.txt"
 
 # Update vm with current remote branches
 git remote update origin --prune
@@ -75,7 +77,7 @@ getMergedBranchMultidevName "merged-branches-clean.txt"
 merged_branch=" ${merged_branch_multidev_names[*]} "
 for env in ${existing_terminus_envs[@]}; do
   if [[ $merged_branch =~ " $env " ]] ; then
-    ~/documentation/bin/terminus site delete-env --env=$env --site=static-docs --remove-branch --yes
+    ~/documentation/bin/terminus multidev:delete static-docs.$env --delete-branch --yes
   fi
 done
 

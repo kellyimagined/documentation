@@ -23,7 +23,7 @@ categories: [managing]
 
     <thead>
       <tr>
-        <th>Commands</th>
+        <th>Command</th>
         <th>Usage</th>
       </tr>
     </thead>

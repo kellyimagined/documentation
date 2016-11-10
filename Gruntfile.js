@@ -12,7 +12,9 @@ module.exports = function(grunt) {
           {expand: true, src: ['node_modules/angular/angular.min.js'], dest: 'source/docs/assets/js'},
           {expand: true, src: ['node_modules/angular-material/angular-material.min.js'], dest: 'source/docs/assets/js/'},
           {expand: true, src: ['node_modules/angular-animate/angular-animate.min.js'], dest: 'source/docs/assets/js/'},
-          {expand: true, src: ['node_modules/angular-aria/angular-aria.min.js'], dest: 'source/docs/assets/js/'}
+          {expand: true, src: ['node_modules/angular-aria/angular-aria.min.js'], dest: 'source/docs/assets/js/'},
+          {expand: true, src: ['node_modules/marked/lib/marked.js'], dest: 'source/docs/assets/js/'},
+          {expand: true, src: ['node_modules/angular-md/dist/angular-md.js'], dest: 'source/docs/assets/js/'}
         ],
       },
     },
