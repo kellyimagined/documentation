@@ -67,7 +67,7 @@
 
   terminusLatestRelease.controller("terminusLatestReleaseCtrl", function($scope, $http) {
       $scope.latestRelease = {};
-      $http.get("/docs/assets/terminuslatest.json").success(function(response){
+      $http.get("/docs/assets/terminus/releases/latest.json").success(function(response){
         $scope.latestRelease = response;
       });
   });
@@ -80,7 +80,7 @@
 
   terminusRelease.controller('terminusReleaseCtrl', function($scope, $http) {
     $scope.releases = [];
-    $http.get('/docs/assets/terminusreleases.json').success(function(data) {
+    $http.get('/docs/assets/terminus/releases.json').success(function(data) {
         $scope.releases = data;
       });
     }
@@ -98,7 +98,7 @@
   terminusCommandsApp.controller('mainController', function($scope, $http) {
     $scope.searchCommand   = '';
     $scope.terminus = [];
-    $http.get("/docs/assets/t1commands.json").success(function(response){
+    $http.get("/docs/assets/terminus/commands.json").success(function(response){
       $scope.terminus = response;
     });
     $scope.clearFilters = function(){
