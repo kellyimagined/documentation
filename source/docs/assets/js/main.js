@@ -58,6 +58,36 @@
     hideTooltip(e.trigger);
   });
 
+
+  var terminusLatestRelease = angular.module("terminusLatestReleaseApp", ['yaru22.md']);
+  terminusLatestRelease.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('{[{');
+    $interpolateProvider.endSymbol('}]}');
+  });
+
+  terminusLatestRelease.controller("terminusLatestReleaseCtrl", function($scope, $http) {
+      $scope.latestRelease = {};
+      $http.get("/docs/assets/terminuslatest.json").success(function(response){
+        $scope.latestRelease = response;
+      });
+  });
+
+  var terminusRelease = angular.module('terminusReleaseApp', ['yaru22.md']);
+  terminusRelease.config(function($interpolateProvider) {
+    $interpolateProvider.startSymbol('{[{');
+    $interpolateProvider.endSymbol('}]}');
+  });
+
+  terminusRelease.controller('terminusReleaseCtrl', function($scope, $http) {
+    $scope.releases = [];
+    $http.get('/docs/assets/terminusreleases.json').success(function(data) {
+        $scope.releases = data;
+      });
+    }
+  );
+  angular.bootstrap(document.getElementById("terminusRelease"), ['terminusReleaseApp']);
+
+
   var terminusCommandsApp = angular.module('terminusCommandsApp', ['ngMaterial']);
 
   terminusCommandsApp.config(function($interpolateProvider) {
