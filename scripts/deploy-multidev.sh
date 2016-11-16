@@ -41,7 +41,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
     # Get the environment hostname and identify deployment URL
     export url=`bin/terminus env:view static-docs.$normalize_branch --print`
     export url=https://${url:7: -1}
-    export hostname=${url:8: -1}
+    export hostname=${url:7: -1}
     export docs_url=${url}/docs
 
   fi
