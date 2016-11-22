@@ -34,3 +34,14 @@ sculpin_content_types:
             - tags
             - contributors
         permalink: docs/guides/:basename/
+
+    videos:
+        type: path
+        path: _videos
+        singular_name: video
+        enabled: true
+        taxonomies:
+            - categories
+            - tags
+            - contributors
+        permalink: videos/:basename/

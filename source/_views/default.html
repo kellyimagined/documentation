@@ -93,9 +93,19 @@
     </p>
     <![endif]-->
     {% include("navbar.html") %}
+    <!-- {% include("devbar.html") %} -->
 
     <!-- container -->
-    <div class="container-fluid">
+    <div class="container top-container">
+      <div class="row">
+        <div class="col-md-12 mb-20">
+          {% include("breadcrumb.html") %}
+        </div>
+      </div>
+    </div>
+
+    <!-- container -->
+    <div class="container content">
         <div class="row">
             {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}
         </div>

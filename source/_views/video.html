@@ -3,11 +3,11 @@
 
 
 
-<div id="doc" class="article col-md-9">
+<div id="video" class="article col-md-9">
   <h1 style="margin-bottom:10px;"class="pio-docs-title">{{ page.title }}</h1>
 
   <p class="article-subhead">{{ page.description }}</p>
-  
+      <div class="share-buttons">
         {% set fullpath = page.url|replace({'/docs': '/_docs', '/guides': ''}) %}
         <div class="dropdown">
         <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -42,12 +42,46 @@
         <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}/intent/tweet?text=%40getpantheon%20doc%3A%20{{ page.title }}"></a>
         <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
 
-    <div style="margin-top:15px;margin-bottom:45px;">
+      </div>
+
+
+
+    <div class="mb-70">
+      <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
+    </div>
+
+    
+    <div>
         {{ page.blocks.content|raw }}
     </div>
+
+    <div class="helpful mb-70">
+      <span class="helpful__text">Was this helpful?</span>
+      <a href="" class="helpful__button helpful__button--yes"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i>Yes</a>
+      <a href="" class="helpful__button helpful__button--no"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>No</a>
+    </div>
+
 </div>
 <div class="article col-md-3">
-    {% include ("sidebarnav.html") %}
+<!--   {{ page.contributor }} -->
+    <div class="author-info">
+      <div class="author-info__img">
+        <a href="/team/emily-miller"><img typeof="foaf:Image" src="https://pantheon.io/sites/default/files/styles/540x540_top/public/Emily_Miller1.jpg?itok=yQvDdA1h" width="540" height="540" alt=""></a>  
+      </div>
+
+      <h3 class="author-info__name">Andrew Taylor</h3>
+      <p class="author-info__title">Content Strategy Lead</p>
+    </div>
+    
+
+
+<!--     {% include ("sidebarnav.html") %} -->
+    <h4>Related</h4>
+    <ul class="related">
+      <li><a href="/contributors">Creating and Revoking Machine Tokens</a></li>
+      <li><a href="http://pantheon.io">Automated Testing WordPress with Behat</a></li>
+      <li><a href="">Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI</a></li>
+    </ul>
 </div>
 
 {% endblock %}

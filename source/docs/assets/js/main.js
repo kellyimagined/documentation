@@ -120,3 +120,11 @@
     return filtered;
   }
 });
+
+
+// Attach external link icons
+$(function() {
+  $('.related li a').filter(function() {
+    return this.hostname && this.hostname !== location.hostname;
+  }).addClass('external-link');
+});
