@@ -678,39 +678,7 @@ li.create-account {
   line-height: 1;
 }
 
-@media (max-width: 1214px) {
-  .hero-video__text {
-    padding: 20px;
-  }
-}
 
-@media (max-width: 1006px) {
-  .hero-video__video {
-    padding-right: 0;
-  }
-}
-@media (max-width: 998px) {
-  .pio-docs-nav .navbar-nav > li > a {
-    padding: 13px 10px 10px;
-  }
-  .navbar-nav .dropdown:after {
-    display: none;
-  }
-  .pantheon-logo {
-    max-width:180px;
-  }
-  body {
-    padding-top: 83px;
-  }
-  .pio-docs-nav .navbar-toggle {
-    margin-top: 25px;
-  }
-}
-@media (max-width: 500px) {
-  .topic-info__description {
-    display: none;
-  }
-}
 
 .pio-docs-nav .navbar-nav > li > a:hover,
 .pio-docs-nav .navbar-nav > .active > a,
@@ -4027,3 +3995,40 @@ margin-bottom: 10px;
   line-height: 18px;
   margin-right: 10px;
 }
+
+
+/* Responsive tweaks */
+
+@media (max-width: 1214px) {
+  .hero-video__text {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 1006px) {
+  .hero-video__video {
+    padding-right: 0;
+  }
+}
+@media (max-width: 998px) {
+  .pio-docs-nav .navbar-nav > li > a {
+    padding: 13px 10px 10px;
+  }
+  .navbar-nav .dropdown:after {
+    display: none;
+  }
+  .pantheon-logo {
+    max-width:180px;
+  }
+  body {
+    padding-top: 83px;
+  }
+  .pio-docs-nav .navbar-toggle {
+    margin-top: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .topic-info__description {
+    display: none;
+  }
+/*}*/ Responsive tweaks 
