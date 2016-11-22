@@ -101,7 +101,58 @@ Apply updates to all contributed modules, themes, and plugins via Terminus by se
 <figure><pre id="deploy-live"><code class="bash" data-lang="bash">terminus1x env:deploy my-site.live --note="Deploy core and contrib updates" --cc</code></pre></figure>
 </div>
 
+## Reset Dev Environment to Live
 
+Rewrite history and reset the entire Dev environment (codebase, files, and database) to the state of Live with Terminus.
+
+Clone the site's codebase to your local machine if you have not done so already (replace `awesome-site` with your site name):
+
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#git-clone"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="git-clone"><code class="bash" data-lang="bash">`terminus connection:info awesome-site.dev --fields='Git Command' --format=string`</code></pre></figure>
+</div>
+
+
+Automate the procedure for resetting Dev to Live by creating an executable bash script (e.g.`reset-dev-to-live.sh`) with the following:
+
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#reset-dev-script"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="reset-dev-script"><code class="bash" data-lang="bash">#!/bin/bash
+
+ #Authenticate Terminus
+ terminus auth:login
+
+ #Provide the target site name (e.g. your-awesome-site)
+ echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER] to reset the Dev environment to Live:';
+ read SITE;
+
+ #Set the Dev environment's connection mode to Git
+ echo "Making sure the environment's connection mode is set to Git...";
+ terminus connection:set $SITE.dev git
+
+ #Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live
+ echo "Rewritting history on the Dev environment's codebase...";
+ git reset --hard `terminus env:code-log $SITE.live --format=string | grep -m1 'live' | cut -f 4`
+
+ #Force push to Pantheon to rewrite history on Dev and reset codebase to Live
+ git push origin master -f
+
+ #Clone database and files from Live into Dev
+ echo "Importing database and files from Live into Dev...";
+ terminus env:clone-content $SITE.live dev
+
+ #Open the Dev environment on the Site Dashboard
+ terminus dashboard:view $SITE.dev</code></pre></figure>
+ </div>
+
+Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
+
+<div class="copy-snippet">
+<button class="btn btn-default btn-clippy" data-clipboard-target="#run-reset-script"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
+<figure><pre id="run-reset-script"><code class="bash" data-lang="bash">sh /PATH/TO/SCRIPT/reset-dev-to-live.sh</code></pre></figure>
+</div>
+
+The Site Dashboard will open once the reset procedure has completed.
 
 <div class="terminus-pager col-md-12">
   <hr>
