@@ -50,7 +50,7 @@
       <script src="//fast.wistia.com/embed/medias/{{ page.videoid }}.jsonp" async></script><script src="//fast.wistia.com/assets/external/E-v1.js" async></script><div class="wistia_responsive_padding" style="padding:56.25% 0 0 0;position:relative;"><div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;"><div class="wistia_embed wistia_async_{{ page.videoid }} videoFoam=true" style="height:100%;width:100%">&nbsp;</div></div></div>
     </div>
 
-    
+
     <div>
         {{ page.blocks.content|raw }}
     </div>
@@ -61,26 +61,18 @@
       <a href="" class="helpful__button helpful__button--no"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i>No</a>
     </div>
 
+
 </div>
 <div class="article col-md-3">
-<!--   {{ page.contributor }} -->
-    <div class="author-info">
-      <div class="author-info__img">
-        <a href="/team/emily-miller"><img typeof="foaf:Image" src="https://pantheon.io/sites/default/files/styles/540x540_top/public/Emily_Miller1.jpg?itok=yQvDdA1h" width="540" height="540" alt=""></a>  
-      </div>
-
-      <h3 class="author-info__name">Andrew Taylor</h3>
-      <p class="author-info__title">Content Strategy Lead</p>
-    </div>
-    
+      {% include 'author-info.twig' %}
 
 
 <!--     {% include ("sidebarnav.html") %} -->
     <h4>Related</h4>
     <ul class="related">
-      <li><a href="/contributors">Creating and Revoking Machine Tokens</a></li>
-      <li><a href="http://pantheon.io">Automated Testing WordPress with Behat</a></li>
-      <li><a href="">Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI</a></li>
+      <li><a href="/docs/machine-tokens">Creating and Revoking Machine Tokens</a></li>
+    	<li><a href="/docs/guides/wordpress-automated-testing">Automated Testing WordPress with Behat</a></li>
+    	<li><a href="/docs/guides/wordpress-commandline">Use the Command Line to Create a WordPress Site Using Terminus and WP-CLI</a></li>
     </ul>
 </div>
 

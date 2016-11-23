@@ -44,4 +44,14 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
-        permalink: videos/:basename/
+        permalink: docs/videos/:basename/
+    topics:
+        type: path
+        path: _topics
+        singular_name: topic
+        enabled: true
+        taxonomies:
+            - categories
+            - tags
+            - contributors
+        permalink: docs/:basename/
