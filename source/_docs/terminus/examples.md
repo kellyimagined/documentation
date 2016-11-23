@@ -117,7 +117,7 @@ Automate the procedure for resetting Dev to Live by downloading the following ba
 
 <div class="script-file-header">
 reset-dev-to-live.sh
-<a href="/source/docs/assets/scripts/reset-dev-to-live.sh"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
+<a download="reset-dev-to-live.sh" href="/source/docs/assets/scripts/reset-dev-to-live.txt"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
 </button></a>
 </div>
 <pre id="script-file"><code id="reset-dev-to-live"></code></pre>
