@@ -2212,8 +2212,9 @@ img.clippy {
   border:none;
 }
 .btn-download {
+  line-height: normal;
   float: right;
-  margin-top: -3px;
+  margin-top: -2px;
 }
 .script-file-header {
     width: 100%;
