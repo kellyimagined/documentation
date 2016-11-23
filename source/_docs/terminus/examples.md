@@ -113,37 +113,14 @@ Clone the site's codebase to your local machine if you have not done so already 
 </div>
 
 
-Automate the procedure for resetting Dev to Live by creating an executable bash script (e.g.`reset-dev-to-live.sh`) with the following:
+Automate the procedure for resetting Dev to Live by downloading the following bash script:
 
-<div class="copy-snippet">
-<button class="btn btn-default btn-clippy" data-clipboard-target="#reset-dev-script"><img class="clippy" src="/source/docs/assets/images/clippy.svg" width="17" alt="Copy to clipboard"></button>
-<figure><pre id="reset-dev-script"><code class="bash" data-lang="bash">#!/bin/bash
-
- #Authenticate Terminus
- terminus auth:login
-
- #Provide the target site name (e.g. your-awesome-site)
- echo 'Provide the site name (e.g. your-awesome-site), then press [ENTER] to reset the Dev environment to Live:';
- read SITE;
-
- #Set the Dev environment's connection mode to Git
- echo "Making sure the environment's connection mode is set to Git...";
- terminus connection:set $SITE.dev git
-
- #Identify the most recent commit deployed to Live and overwrite history on Dev's codebase to reflect Live
- echo "Rewritting history on the Dev environment's codebase...";
- git reset --hard `terminus env:code-log $SITE.live --format=string | grep -m1 'live' | cut -f 4`
-
- #Force push to Pantheon to rewrite history on Dev and reset codebase to Live
- git push origin master -f
-
- #Clone database and files from Live into Dev
- echo "Importing database and files from Live into Dev...";
- terminus env:clone-content $SITE.live dev
-
- #Open the Dev environment on the Site Dashboard
- terminus dashboard:view $SITE.dev</code></pre></figure>
- </div>
+<div class="script-file-header">
+reset-dev-to-live.sh
+<a href="/source/docs/assets/scripts/reset-dev-to-live.sh"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
+</button></a>
+</div>
+<pre id="script-file"><code id="reset-dev-to-live"></code></pre>
 
 Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
 

@@ -10,7 +10,6 @@
   <script src="/docs/assets/js/vendor/jquery-ui-1.9.1.custom.min.js"></script>
   <script src="/docs/assets/js/highlight.pack.js"></script>
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
   <script src="/docs/assets/js/src/application.js"></script>
   <script src="/docs/assets/js/jquery.tocify.js"></script>
   <script src="//www.google-analytics.com/analytics.js"></script>
@@ -147,3 +146,12 @@
               'utm_campaign': 'docs (organic)'}
   pantheon_track(defaults)
   </script>
+  <script type="text/javascript">
+   $(document).ready(function(){
+       $('#reset-dev-to-live').load("/source/docs/assets/scripts/reset-dev-to-live.sh");
+       $('#reset-dev-to-live').attr('data-lang', 'bash');
+       $('#reset-dev-to-live').addClass('bash');
+
+   });
+   hljs.initHighlightingOnLoad();
+   </script>
