@@ -138,7 +138,7 @@
   })();
 
   </script>
-
+  <script>hljs.initHighlightingOnLoad();</script>
   <script type="text/javascript" src="//d2qkfn813cyz6e.cloudfront.net/js/pantheon-js-tracking.min.js?d=e"></script>
   <script type="text/javascript">
   defaults = {'utm_content': window.location.pathname,
@@ -146,12 +146,23 @@
               'utm_campaign': 'docs (organic)'}
   pantheon_track(defaults)
   </script>
-  <script type="text/javascript">
-   $(document).ready(function(){
-       $('#reset-dev-to-live').load("/source/docs/assets/scripts/reset-dev-to-live.txt");
-       $('#reset-dev-to-live').attr('data-lang', 'bash');
-       $('#reset-dev-to-live').addClass('bash');
 
-   });
-   hljs.initHighlightingOnLoad();
-   </script>
+  <!--Script for terminus/examples page to download reset script-->
+  {% if page.terminusexample %}
+      <script type="text/javascript">
+            function downloadInnerHtml(filename, elId, mimeType) {
+                var elHtml = document.getElementById(elId).innerText;
+                var link = document.createElement('a');
+                mimeType = mimeType || 'text/x-shellscript';
+                link.setAttribute('download', filename);
+                link.setAttribute('href', 'data:' + mimeType + ';charset=utf-8,' + encodeURIComponent(elHtml));
+                link.click();
+            }
+
+            var fileName =  'reset-dev-to-live.sh'; // You can use the .txt extension if you want
+
+            $('#downloadLink').click(function(){
+                downloadInnerHtml(fileName, 'reset-dev-to-live','text/x-shellscript');
+            });
+         </script>
+   {% endif %}
