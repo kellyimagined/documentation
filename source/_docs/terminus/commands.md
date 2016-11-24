@@ -1,9 +1,8 @@
 ---
-title: Terminus Manual: Command Reference
+title: Terminus Manual
+subtitle: Command Reference
 terminuspage: true
 type: terminuspage
-tags: [terminus]
-categories: [managing]
 ---
 
 <div class="container col-md-12" ng-app="terminusCommandsApp" ng-controller="mainController">

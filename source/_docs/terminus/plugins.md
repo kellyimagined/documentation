@@ -1,9 +1,8 @@
 ---
-title:  Terminus Manual: Extend with Plugins
+title:  Terminus Manual
+subtitle: Extend with Plugins
 terminuspage: true
 type: terminuspage
-tags: [terminus]
-categories: [managing]
 ---
 <ul>
   <li>What are plugins and why they're awesome</li>

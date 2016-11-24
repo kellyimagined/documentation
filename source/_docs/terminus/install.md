@@ -1,10 +1,9 @@
 ---
-title:  Terminus Manual: Installation
+title:  Terminus Manual
+subtitle: Installation
 terminuspage: true
 terminusinstall: true
 type: terminuspage
-tags: [terminus]
-categories: [managing]
 ---
 <!-- Tab Nav -->
 <ul class="nav nav-tabs" role="tablist">

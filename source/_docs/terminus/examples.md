@@ -1,11 +1,10 @@
 ---
-title: Terminus Manual: Example Usage
+title: Terminus Manual
+subtitle: Example Usage
 terminuspage: true
 terminusexample: true
 terminustoc: true
 type: terminuspage
-tags: [terminus]
-categories: [managing]
 ---
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.

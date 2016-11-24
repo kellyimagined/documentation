@@ -1,9 +1,9 @@
 ---
-title:  Terminus Manual: Getting Started
+title:  Terminus Manual
+subtitle: Getting Started
 terminuspage: true
 type: terminuspage
-tags: [terminus]
-categories: [managing]
+tags: [cli, automate]
 layout: terminuspage
 permalink: docs/:basename/
 ---

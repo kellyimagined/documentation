@@ -1,9 +1,8 @@
 ---
-title:  Terminus Manual: Releases and Changelog
+title:  Terminus Manual
+subtitle: Releases and Changelog
 terminuspage: true
 type: terminuspage
-tags: [terminus]
-categories: [managing]
 ---
 <div id="terminusLatestReleaseApp" ng-app="terminusLatestReleaseApp" ng-controller="terminusLatestReleaseCtrl">
   <h2>{[{latestRelease.name}]} <span class="label label-success">Current Release</span></h2>

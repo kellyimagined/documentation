@@ -2,12 +2,10 @@ sculpin:
 sculpin_theme:
     theme: sculpin/bootstrap-3-blog-theme
 sculpin_content_types:
-
     posts:
         permalink: docs/changelog/:year/:month/
         path: _changelog
         enabled: true
-
     terminuspages:
         type: meta
         taxonomies:
@@ -15,7 +13,6 @@ sculpin_content_types:
             - tags
             - contributors
         permalink: docs/terminus/:basename/
-
     docs:
         type: path
         path: _docs
@@ -26,15 +23,15 @@ sculpin_content_types:
             - tags
             - contributors
         permalink: docs/:basename/
-
     guides:
-        type: meta
+        type: path
+        path: _guides
+        layout: doc
         taxonomies:
             - categories
             - tags
             - contributors
         permalink: docs/guides/:basename/
-
     videos:
         type: path
         path: _videos
@@ -45,13 +42,3 @@ sculpin_content_types:
             - tags
             - contributors
         permalink: docs/videos/:basename/
-    topics:
-        type: path
-        path: _topics
-        singular_name: topic
-        enabled: true
-        taxonomies:
-            - categories
-            - tags
-            - contributors
-        permalink: docs/:basename/
