@@ -7,7 +7,7 @@
   <h1 style="margin-bottom:10px;"class="pio-docs-title">{{ page.title }}</h1>
   <p class="article-subhead">{{ page.description }}</p>
 
-        {% set fullpath = page.url|replace({'/docs': '/_docs', '/guides': ''}) %}
+        {% set fullpath = page.url|replace({'/docs': '/_docs', '/_guides': '/guides', '/_videos': '/vidoes'}) %}
         <div class="dropdown">
         <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
             <span class="icon-github"></span>
