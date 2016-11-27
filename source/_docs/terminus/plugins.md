@@ -3,6 +3,7 @@ title:  Terminus Manual
 subtitle: Extend with Plugins
 terminuspage: true
 type: terminuspage
+permalink: docs/terminus/:basename/
 ---
 <ul>
   <li>What are plugins and why they're awesome</li>

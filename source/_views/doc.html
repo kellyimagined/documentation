@@ -1,17 +1,17 @@
 {% extends "default" %}
 {% block content_wrapper %}
-
-
-
 <div id="doc" class="article col-md-9">
-  <h1 style="margin-bottom:10px;"class="pio-docs-title">{{ page.title }}</h1>
+  <h1 style="margin-bottom:10px;margin-top:0px;"class="pio-docs-title">{{ page.title }}</h1>
   <p class="article-subhead">{{ page.description }}</p>
+  {% if page.contributors %}
+  {% set contributor_list = page.contributors %}
+  <small><i class="fa fa-users"></i> Contributors: {% include 'contributor_list.twig' %}</small>
+  {% endif %}
 
         {% set fullpath = page.url|replace({'/docs': '/_docs', '/_guides': '/guides', '/_videos': '/vidoes'}) %}
         <div class="dropdown">
         <button class="btn btn-contribute dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-            <span class="icon-github"></span>
-            Contribute
+            <i class="fa fa-github"></i> Contribute
           <span class="caret"></span>
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">

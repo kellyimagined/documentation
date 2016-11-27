@@ -4,6 +4,7 @@ subtitle: Installation
 terminuspage: true
 terminusinstall: true
 type: terminuspage
+permalink: docs/terminus/:basename/
 ---
 <!-- Tab Nav -->
 <ul class="nav nav-tabs" role="tablist">

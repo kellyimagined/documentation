@@ -3,7 +3,8 @@ title:  Terminus Manual
 subtitle: Getting Started
 terminuspage: true
 type: terminuspage
-tags: [cli, automate]
+tags: [automate, cli]
+categories: [automate, cli]
 layout: terminuspage
 permalink: docs/:basename/
 ---

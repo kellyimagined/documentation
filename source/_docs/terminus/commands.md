@@ -3,6 +3,7 @@ title: Terminus Manual
 subtitle: Command Reference
 terminuspage: true
 type: terminuspage
+permalink: docs/terminus/:basename/
 ---
 
 <div class="container col-md-12" ng-app="terminusCommandsApp" ng-controller="mainController">

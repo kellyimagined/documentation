@@ -1,10 +1,10 @@
 ---
-title: Terminus Manual
-subtitle: Example Usage
+title: Terminus Manual: Example Usage
 terminuspage: true
 terminusexample: true
 terminustoc: true
 type: terminuspage
+permalink: docs/terminus/:basename/
 ---
 ## Applying Updates
 Quickly install updates to core, contributed modules, themes, and plugins from the command line with Terminus.
@@ -117,7 +117,7 @@ Automate the procedure for resetting Dev to Live by downloading the following ba
 
 <div class="script-file-header">
 reset-dev-to-live.sh
-<a href="/source/docs/assets/scripts/reset-dev-to-live.sh"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
+<a id="downloadLink"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
 </button></a>
 </div>
 <pre><code id="reset-dev-to-live">#!/bin/bash
@@ -145,10 +145,7 @@ echo "Importing database and files from Live into Dev...";
 terminus env:clone-content $SITE.live dev
 
 #Open the Dev environment on the Site Dashboard
-<a href="/source/docs/assets/scripts/reset-dev-to-live.sh"><button class="btn btn-default btn-download"><i class="fa fa-download" aria-hidden="true"></i>   Download Script
-</button></a>
-</div>
-<pre id="script-file"><code id="reset-dev-to-live"></code></pre>
+terminus dashboard:view $SITE.dev</code></pre>
 
 Execute the script from the command line within the root directory of your site's codebase to reset Dev to Live:
 

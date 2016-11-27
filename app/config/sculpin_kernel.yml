@@ -12,7 +12,6 @@ sculpin_content_types:
             - categories
             - tags
             - contributors
-        permalink: docs/terminus/:basename/
     docs:
         type: path
         path: _docs
@@ -24,21 +23,14 @@ sculpin_content_types:
             - contributors
         permalink: docs/:basename/
     guides:
-        type: path
-        path: _guides
-        layout: doc
+        type: meta
         taxonomies:
             - categories
             - tags
             - contributors
-        permalink: docs/guides/:basename/
     videos:
-        type: path
-        path: _videos
-        singular_name: video
-        enabled: true
+        type: meta
         taxonomies:
             - categories
             - tags
             - contributors
-        permalink: docs/videos/:basename/
