@@ -73,8 +73,18 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   ~/documentation/bin/terminus list > source/docs/assets/terminus/commands.json --format=json
   curl https://api.github.com/repos/pantheon-systems/terminus/releases > source/docs/assets/terminus/releases.json
   curl https://api.github.com/repos/pantheon-systems/terminus/releases/latest > source/docs/assets/terminus/releases/latest.json
-  # rsync output_prod/* to Valhalla
+  # rsync output_prod/docs to Valhalla
   rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/docs/ --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
+  if [ "$?" -eq "0" ]
+  then
+    echo "Success: Deployed to $url"
+  else
+    echo "Error: Deploy failed, review rsync status"
+    exit 1
+  fi
+
+  # rsync output_prod/favicon.ico to Valhalla
+  rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/favicon.ico --temp-dir=../../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:files/docs/
   if [ "$?" -eq "0" ]
   then
     echo "Success: Deployed to $url"
