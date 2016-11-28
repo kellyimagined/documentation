@@ -18,7 +18,17 @@
                 {% elseif category == "manage" %}
                 <a href="{{ site.url }}/{{ category|url_encode(true) }}">Manage Users & Orgs</a> /
                 {% elseif category == "cli" %}
-                <a href="{{ site.url }}/{{ category|url_encode(true) }}">Command Line Tools</a> /
+                <a href="{{ site.url }}/automate/cli">Command Line Tools</a> /
+                {% elseif category == "considerations" %}
+                <a href="{{ site.url }}/platform/considerations">Considerations</a> /
+                {% elseif category == "cache" %}
+                <a href="{{ site.url }}/performance/cache">Cache</a> /
+                {% elseif category == "git" %}
+                <a href="{{ site.url }}/develop/git">Git</a> /
+                {% elseif category == "sftp" %}
+                <a href="{{ site.url }}/develop/sftp">On-Server Development</a> /
+                {% elseif category == "local" %}
+                <a href="{{ site.url }}/develop/local">Local</a> /
                 {% else %}
                 <a href="{{ site.url }}/{{ category|url_encode(true) }}" >{{ category | capitalize }}</a> /
                 {% endif %}
