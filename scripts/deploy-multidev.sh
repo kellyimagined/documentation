@@ -50,7 +50,6 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   export avoid_redirect="window.location.hostname == '$hostname' ||"
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/default.html
   sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/taxon.html
-  sed -i '9i\'"      ${avoid_redirect}"'\' source/_views/posts.html
 
   # Update CTA edit link so that the current branch is used
   sed -i '18s/master/'"$CIRCLE_BRANCH"'/g' source/_views/doc.html
@@ -84,7 +83,7 @@ if [ "$CIRCLE_BRANCH" != "master" ] && [ "$CIRCLE_BRANCH" != "dev" ] && [ "$CIRC
   fi
 
   # rsync output_prod/favicon.ico to Valhalla
-  rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/favicon.ico --temp-dir=../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:code/
+  rsync --size-only --checksum --delete-after -rtlvz --ipv4 --progress -e 'ssh -p 2222' output_prod/favicon.ico --temp-dir=../tmp/ $normalize_branch.$STATIC_DOCS_UUID@appserver.$normalize_branch.$STATIC_DOCS_UUID.drush.in:code
   if [ "$?" -eq "0" ]
   then
     echo "Success: Deployed to $url"
