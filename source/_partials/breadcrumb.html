@@ -1,6 +1,9 @@
 <div style="row">
       <ul class="pio-breadcrumb" style="margin-top:30px;">
           <a href="/docs">Home</a> /
+          {% if page.changelog is defined %}
+          <a href="{{ site.url }}/changelog/">Changelog</a> /
+          {% endif %}
             {% if page.categories %}
               {% for category in page.categories %}
                 {% if category == "getstarted" %}

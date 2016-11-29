@@ -49,7 +49,7 @@
 
             // **ignoreSelector**: Accepts String: Any jQuery selector
             // A selector to any element that would be matched by selectors that you wish to be ignored
-            ignoreSelector: null,
+            ignoreSelector: ".block__title",
 
             // **selectors**: Accepts an Array of Strings: Any jQuery selectors
             // The element's used to generate the table of contents.  The order is very important since it will determine the table of content's nesting structure
