@@ -23,7 +23,7 @@ Open the FileZilla application and enter in the connection information. Be sure 
 Select to accept the server's host key for the current session so it is stored in cache. This allows you to connect to the server and manage your files for the current session.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 Under the Advanced Tab, leave the Remote Directory blank.  </div>
 
 ## Authentication

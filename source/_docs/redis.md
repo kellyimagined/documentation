@@ -65,7 +65,7 @@ For detailed information, see [Installing Redis on WordPress](/docs/wordpress-re
  ```
 
       <div class="alert alert-info">
-      <h4>Note</h4>Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
+      <h3>Note</h3>Distributions may vary in their directory structure. You will need to check the path at which the Redis module resides and change any paths in the snippet below to match your path.</div>
 
 5. Optional configurations for `sites/default/settings.php` (only choose one as they will conflict):
  - Option A: Higher performance for smaller page counts.<br>

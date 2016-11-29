@@ -6,7 +6,7 @@ type: terminuspage
 permalink: docs/terminus/:basename/
 ---
 
-<div class="container col-md-12" ng-app="terminusCommandsApp" ng-controller="mainController">
+<div class="col-md-12" ng-app="terminusCommandsApp" ng-controller="mainController">
 
   <form>
     <div class="form-group">

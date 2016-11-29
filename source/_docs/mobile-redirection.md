@@ -16,7 +16,7 @@ Be sure that you have:
 - Configured mobile-ready pages; some themes already provide mobile stylesheets.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 The following instructions will enable automatic redirects for the domain associated with the site's Live environment. To test redirects on another environment, you will need to add a subdomain (e.g. <code> m-test.example.com</code>) to the Test environment and configure the subdomain on CloudFlare with the provided DNS records.</div>
 
 ### Considerations

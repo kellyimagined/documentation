@@ -21,13 +21,13 @@ You must have a paid plan to add a domain to a site environment. For more inform
 You can simultaneously add both the bare domain name and the www subdomain. This is highly recommended, as you will not be able to redirect traffic from one to the other without adding both.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment. Automatic resolution of domains and wildcards are not supported.</div>
+<h3>Note</h3>Add all domains you want to resolve to Pantheon within the Site Dashboard for each respective environment. Automatic resolution of domains and wildcards are not supported.</div>
 
 ### Develop Using a Domain Without Changing DNS
 Use the following workaround to allow your local workstation to access your Pantheon site by the desired domain without changing DNS. This requires a paid plan.
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</div>
+<h3>Warning</h3>This process is for short-term testing only. Use the Dashboard's recommendations when going live, or you will experience downtime when IP addresses change.</div>
 
 1. From the command line, `dig` for Pantheon IPs associated with your Live environment URL:
 

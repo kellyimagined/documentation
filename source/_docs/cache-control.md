@@ -53,7 +53,7 @@ $build['#cache']['max-age'] = 0;
 As an alternative to using HTTP headers to control downstream caching, you can set a `NO_CACHE` cookie. For details, see [Working with Cookies on Pantheon](/docs/cookies).
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
+<h3>Warning</h3>
 Pantheon does not support manually editing and updating the VCL. We use a standard VCL for all sites on the platform. Requests are accepted, but we do not guarantee change requests will be implemented.</div>
 
 ## Test Pages Excluded from Cache

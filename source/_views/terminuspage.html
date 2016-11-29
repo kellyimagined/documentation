@@ -1,6 +1,7 @@
 {% extends "default" %}
 {% block content_wrapper %}
-<div class="col-md-12" style="padding-right:50px;padding-left:0px;">
+</div></div><!--close main content container-->
+<div class="col-md-12" style="margin-top:-20px;padding-right:50px;padding-left:0px;">
   {% include("terminus_navbar.html") %}
   {% if page.terminustoc %}
   <div class="col-xs-12 col-md-7 manual-doc">
@@ -46,7 +47,7 @@
             </script>
             <a class="twitter-share-button" href="https://pantheon.io{{ page.url }}/intent/tweet?text=%40getpantheon%20doc%3A%20{{ page.title }}"></a>
             <script async defer src="https://slackin.pantheon.io/slackin.js"></script><br>
-      <hr style="margin-top:10px;margin-bottom:10px;">
+            <br>
     </header>
       {{ page.blocks.content|raw }}
   </div>
@@ -61,6 +62,7 @@
   {% endif %}
 
 </div>
+<div class="container content">
 
 
 {% endblock %}

@@ -16,7 +16,7 @@ Make sure that you have:
 
 The first step in setting up CloudFront on your Drupal site is to create a new CloudFront distribution. This article will help you create a barebones configuration. If you require a more complicated configuration, refer to the [AWS documentation](http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/WorkingWithDownloadDistributions.html#DownloadDistValuesDomainName).
 <div class="alert alert-info">
-<h4>Note</h4>
+<h3>Note</h3>
 A CloudFront distribution is not a Drupal distribution. A CF distribution simply refers to a controller that will be configured to deliver your assets to your website.
 </div>
 1. In the CloudFront console, click **Create Distribution**.
@@ -45,7 +45,7 @@ A CloudFront distribution is not a Drupal distribution. A CF distribution simply
 
 ## Verify Assets Are Coming From the CloudFront Distribution
 <div class="alert alert-info">
-<h4>Note</h4>
+<h3>Note</h3>
 Execute the following steps as an anonymous user (logged out).
 </div>
 1. Create an article on your site and upload an image to it.

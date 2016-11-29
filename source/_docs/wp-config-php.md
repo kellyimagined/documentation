@@ -2,7 +2,7 @@
 title: Configuring wp-config.php
 description: Understand how to adjust and customize the WordPress configuration file for your Pantheon WordPress site.
 tags: [golive, develop, domains]
-categories: [golve, domains]
+categories: [golive, domains]
 contributors: masonjames
 ---
 ## Overview
@@ -11,7 +11,7 @@ WordPress configuration is set in wp-config.php, located within your WordPress s
 
 Pantheon uses environment variables to automatically supply configuration settings (e.g. Database credentials) dynamically to wp-config.php - no editing required. However, you are welcome to customize wp-config.php with any customizations you may need for plugins, themes, and caching.
 
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+<div class="alert alert-danger" role="alert"><h3>Warning</h3>
 You should NEVER put the database connection information for a Pantheon database within your wp-config.php. These credentials will change. If you are having connection errors, please ensure you are running the latest version of WordPress core and have the correct wp-config.php file for Pantheon.</div>
 
 ## Local Database Configuration for Development
@@ -22,7 +22,7 @@ If you are also developing locally and need to configure WordPress for your desk
 
 <script src="//gist-it.appspot.com/https://github.com/pantheon-systems/wordpress/blob/master/wp-config.php?footer=minimal"></script>
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 <code>$_SERVER['SERVER_NAME']</code> should <strong>not</strong> be used to set <code>WP_HOME</code> and/or <code>WP_SITEURL</code>. For more information, see <a href="/docs/server_name-and-server_port/">SERVER_NAME and SERVER_PORT on Pantheon</a>.</div>  
 
 ##Frequently Asked Questions

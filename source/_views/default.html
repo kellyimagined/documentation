@@ -101,7 +101,9 @@
       {% if page.home is not defined %}
         <div class="row">
           <div class="col-md-12 mb-20">
+            {% if page.terminuspage is not defined %}
             {% include("breadcrumb.html") %}
+            {% endif %}
           </div>
         {% endif %}
             {% block content_wrapper %}{% block content %}{% endblock %}{% endblock %}

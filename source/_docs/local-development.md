@@ -70,7 +70,7 @@ From within the Site Dashboard:
 $ gunzip < database.sql.gz | mysql -uUSER -pPASSWORD DATABASENAME
 ````
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 Replace <code>database.sql.gz</code> with the name of the database archive downloaded from Pantheon.</div>
 
 ### Via Terminus

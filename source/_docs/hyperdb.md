@@ -6,7 +6,7 @@ categories: [performance]
 ---
 
 <div class="alert alert-info">
-<h4>Note</h4>
+<h3>Note</h3>
 Replica MySQL databases are available for sites on the <a href="https://pantheon.io/resources/elite-plan-overview">Elite service level</a>. <a href="https://pantheon.io/pantheon-elite-plans">Contact sales</a> to inquire about our Elite plans.
 </div>
 

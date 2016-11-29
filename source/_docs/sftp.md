@@ -44,7 +44,7 @@ Your connection data is as follows:
 **port:** `2222`
  
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 When you set up your SFTP client, remember that SFTP is the protocol and you need to connect to your environment using port 2222.</div>
 
 It is possible to connect to an environment via SFTP by using the terminal. The command is easily accessible from the Connection Information widget for the environment you are on.
@@ -69,7 +69,7 @@ Once your message is ready, click **Commit**.
 
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 Your Dashboard tracks all changes made within your codebase. File change notifications will not include changes in the content files directory (e.g. <code>wp-content/uploads</code> or <code>sites/default/files/</code>) since these are not tracked in version control.</div>
 
 ## SFTP Clients

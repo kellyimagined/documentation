@@ -25,7 +25,7 @@ Now your site’s PHP version is managed via `pantheon.yml`, so it’s in versio
 Available PHP versions are 5.3, 5.5, 5.6, and 7.0.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 Drupal 6 sites are only compatible with PHP 5.4 and below.
 </div>
 

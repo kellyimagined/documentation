@@ -43,7 +43,7 @@ WP-CFM refers to a group of settings to track as a **bundle**. There are two app
 - **Site-Wide Bundling**: Track the entire site configuration in a single bundle with the **Select All** option.
 - **Feature Specific Bundling**: Track plugin, theme, and site-wide settings (e.g. permalinks) separately by creating multiple bundles.
 <div class="alert alert-info">
-<h4>Note</h4>
+<h3>Note</h3>
 To avoid conflicts, do not to track changes for the same values in more than one bundle. WP-CFM alerts you when it happens, but the plugin does not restrict you from doing so.
 </div>
 

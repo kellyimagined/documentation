@@ -13,7 +13,7 @@ terminus site backups create [--element=<code|files|db|all>] [--keep-for]
 
 A backup contains three separate archives: a database backup, a files backup, and a code backup.
 
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+<div class="alert alert-danger" role="alert"><h3>Warning</h3>
 Run backups separately for each environment (Dev, Test, and Live). If you have changes in SFTP mode that you have not committed, the changes will be lost with no way to recover them. The backups are based on the code currently in the Git log.</div>
 
 ## Create a Backup
@@ -42,7 +42,7 @@ terminus site backups get
 Now that you have created the archive files, check out how to [restore an environment from a backup](/docs/restore-environment-backup).
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 Links to backups are signed URLs directly from Amazon S3 and will expire. If a link has expired, go back to the Dashboard and get a new link to the archive. <a href="http://stackoverflow.com/a/4649553">See this documentation for more information about signed URLS</a>.</div>
 
 ## About Your Code Archives

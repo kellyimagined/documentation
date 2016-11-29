@@ -99,7 +99,7 @@ Select the appropriate framework below for your web application, then execute th
 </div>
 
 <div class="alert alert-warning" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 For sites using a distribution other than the ones listed above, go to <strong>Settings</strong> > <strong>About site</strong> > <strong>Upstream</strong> on your Site Dashboard to find your upstream URL.</div>
 
 ## Troubleshooting

@@ -49,7 +49,7 @@ Once the Pantheon Drush aliases have been copied, verify that the site aliases a
 $ drush sa
 ```
 <div class="alert alert-info">
-<h4>Note</h4>
+<h3>Note</h3>
 You must be a <a href="/docs/team-management/#manage-site-team-members">site team member</a> of the site for it to be included within your local alias file. Organization administrators will not see all associated sites within their alias file, but only sites for which they are site team members. The alternative is to execute Drush commands via <a href="/docs/terminus">Terminus</a> for sites in which you are not a direct site team member.
 </div>
 ## Execute a Drush Command on a Pantheon Site Environment
@@ -96,7 +96,7 @@ Project media contains 3 modules: media_internet, file_entity, media.
 ```
 
 <div class="alert alert-danger" role="alert">
-<h4>Warning</h4>
+<h3>Warning</h3>
 <strong>Do not use Drush to update Drupal core on Pantheon</strong>. Pantheon uses Pressflow and includes some additional functionality; Drush assumes that a site is using vanilla Drupal and erroneously overwrites Pressflow. For more details, see <a href="/docs/upstream-updates">Core Updates</a>.
 </div>
 

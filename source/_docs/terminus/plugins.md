@@ -45,7 +45,7 @@ permalink: docs/terminus/:basename/
       <a href="https://github.com/uberhacker/backup-all" class="btn-primary btn">Learn More</a>
     </div>
   </div>
-  <div class="container-fluid">
+  <div class="row">
   <hr>
   </div>
 

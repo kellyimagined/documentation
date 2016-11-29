@@ -70,7 +70,7 @@ Here's logic that you can use in settings.php to hard-code the URL of the CDN pe
 ## Amazon S3 CORS
 
 <div class="alert alert-info">
-<h4>Note</h4>
+<h3>Note</h3>
 The latest version of the Amazon S3 CORS module has Composer Manager as a dependency, which can be problematic on Pantheon if the <a href="/docs/unsupported-modules-plugins/#composer-manager">recommended configuration</a> is not implemented. Alternatively, you can use the <a href="/docs/content-delivery-network#s3-files-system">S3 File System</a>.
 </div>
 

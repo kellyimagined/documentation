@@ -7,7 +7,7 @@ categories: [manage]
 Create a custom distribution of WordPress or Drupal and add it to the Pantheon platform. This will enable users of the affiliated organization to create sites using a specialized codebase as a starting point.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 Custom upstreams are available to the "Partner" and "Strategic Partner" tiers in Pantheon's Partner program. <a href="/docs/organizations/#create-an-organization">Create your agency organization</a> to get started and see our <a href="https://pantheon.io/sites/default/files/Partner_Program_Guide_2015.pdf">Partner Program Guide</a> for information on how to advance to Partner tiers.</div>
 
 ## Create a Remote Repository
@@ -114,7 +114,7 @@ Run your automated acceptance tests, using behat, casper.js, or by manually exec
 
 When testing is complete, merge any outstanding pull requests into the master branch or push to the branch you want Pantheon to clone and pull updates from. Upstreams can be public or private repositories, but this cannot change after sites are created from it.
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
   <ul>
     <li>For private repositories, create a dedicated user with read-only access to the repository. The password should only contain alphanumeric characters.</li>
     <li>For private GitLab repositories, please ensure the user has the "reporter" permissions level.</li>
@@ -139,7 +139,7 @@ After you have a distribution that works on Pantheon, [contact support](/docs/ge
 - Links to evidence of testing on Pantheon. This should include the testing site, test files within the repository, and test reports.
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 You are not able to switch upstreams after creating a site. You will need to export your files, create a new site, and select a new upstream.</div>
 
 Public and Organizational distributions must also provide a promotional screenshot for the public installation page.

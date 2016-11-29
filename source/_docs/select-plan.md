@@ -26,7 +26,7 @@ Identifying your site's service level is quick and easy. You can find this in th
 ![confirm new plan](/source/docs/assets/images/dashboard/confirm-plan-dashboard.png)
 
 <div class="alert alert-info" role="alert">
-<h4>Note</h4>
+<h3>Note</h3>
 If you downgrade from a paid plan to sandbox, the <a href="/docs/">domains</a> you've added in your Live environment will be removed. You will need to re-add domains if you decide to return to a paid plan.</div>
 
 ## Manage Site Settings

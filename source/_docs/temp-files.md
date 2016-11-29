@@ -28,7 +28,7 @@ Replace `'some_tmp_settings'` with the applicable plugin or theme option used to
 update_option('some_tmp_settings', $_SERVER['HOME'] . '/tmp');
 ```
 ## Using Valhalla, Pantheon's Networked Filesystem
-<div class="alert alert-danger" role="alert"><h4>Warning</h4>
+<div class="alert alert-danger" role="alert"><h3>Warning</h3>
 While this technique can work, it comes with a strong caution. Using the filesystem for <code>/tmp</code> requests is not a fail-safe alternative.</div>
 
 ### WordPress
