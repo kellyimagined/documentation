@@ -166,17 +166,6 @@
       {% endfor %}
     </ul>
   </div>
-  <div class="col-md-4">
-    <h4 style="margin-top:0;">More Training</h4>
-    <ul class="related">
-      {% for doc in data.docs_tags.platform if doc.meta.type == "video"%}
-      <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-      {% endfor %}
-      {% for doc in data.docs_tags.platform if doc.meta.type == "guide"%}
-      <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
   {% elseif page.automate %}
   <div class="col-md-8">
     <a class="topic-info-link" href="/docs/automate/cli">
@@ -294,17 +283,6 @@
       {% endfor %}
     </ul>
   </div>
-  <div class="col-md-4">
-    <h4 style="margin-top:0;">More Training</h4>
-    <ul class="related">
-      {% for doc in data.docs_tags.pantheonyml if doc.meta.type == "video"%}
-      <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-      {% endfor %}
-      {% for doc in data.docs_tags.pantheonyml if doc.meta.type == "guide"%}
-      <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
   {% elseif page.considerations %}
   <div class="col-md-8">
     <h4 style="margin-top:0;">Related Docs</h4>
@@ -315,17 +293,6 @@
     {% endif %}
     {% endfor %}
       </ul>
-  </div>
-  <div class="col-md-4">
-    <h4 style="margin-top:0;">More Training</h4>
-    <ul class="related">
-      {% for doc in data.docs_tags.considerations if doc.meta.type == "video"%}
-      <li><a href="{{ doc.url }}"><i class="fa fa-video-camera"></i> {{ doc.title }}</a></li>
-      {% endfor %}
-      {% for doc in data.docs_tags.considerations if doc.meta.type == "guide"%}
-      <li><a href="{{ doc.url }}">{{ doc.title }}</a></li>
-      {% endfor %}
-    </ul>
   </div>
   {% elseif page.cache %}
   <div class="col-md-8">
