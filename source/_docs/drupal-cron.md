@@ -50,7 +50,7 @@ If the site has not been accessed through the web by a visitor for at least two 
 
 There is a two-part workaround; first, keeping the site awake, then using a different mechanism for executing cron tasks.
 
-To keep the site active, some users have used [https://www.pingdom.com/](https://www.pingdom.com/) to access their site as often as once a minute. In conjunction, the use of the Drupal module [http://drupal.org/project/elysia\_cron](http://drupal.org/project/elysia_cron) allows for granular control over cron scheduling and execution with both an user interface and API.
+To keep the site active, some users have used [https://www.pingdom.com/](https://www.pingdom.com/) or [https://uptimerobot.com](https://uptimerobot.com) to access their site as often as once a minute. In conjunction, the use of the Drupal module [http://drupal.org/project/elysia\_cron](http://drupal.org/project/elysia_cron) allows for granular control over cron scheduling and execution with both an user interface and API.
 
 By having pingdom visit the site once a minute like a visitor, the site stays active and elysia\_cron has an opportunity to act every minute (if it needs to).
 
